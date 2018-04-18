@@ -2,3 +2,4 @@
 
 # Smart Traffic with Complex Event Processing
 
+This project shows how traffic control can be optimized with complex event processing.
