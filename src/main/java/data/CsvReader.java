@@ -13,14 +13,18 @@ public class CsvReader implements FileReader {
 
     private CSVInputAdapterSpec spec;
 
+    private InputAdapter inputAdapter;
+
     public CsvReader(String csvPath){
         source = new AdapterInputSource(csvPath);
         spec = new CSVInputAdapterSpec(source, "TrafficEvent");
         spec.setEventsPerSec(1);
         spec.setLooping(true);
-        InputAdapter inputAdapter = new CSVInputAdapter(EsperServiceProvider.getInstance(),spec);
-        inputAdapter.start();
+        inputAdapter = new CSVInputAdapter(EsperServiceProvider.getInstance(),spec);
+    }
 
+    public void runPlayback(){
+        if(inputAdapter != null) this.inputAdapter.start();
     }
 
     public AdapterInputSource getSource() {
