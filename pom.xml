@@ -8,13 +8,31 @@
     <artifactId>SmartTraffic</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <esper.version>7.1.0</esper.version>
+    </properties>
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/com.espertech/esper -->
         <dependency>
             <groupId>com.espertech</groupId>
             <artifactId>esper</artifactId>
-            <version>7.1.0</version>
+            <version>${esper.version}</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.espertech/esperio-csv -->
+        <dependency>
+            <groupId>com.espertech</groupId>
+            <artifactId>esperio-csv</artifactId>
+            <version>${esper.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.espertech</groupId>
+            <artifactId>esperio-csv</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+
     </dependencies>
 
 
