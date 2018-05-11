@@ -16,7 +16,7 @@ public class CsvReader implements FileReader {
     public CsvReader(String csvPath){
         source = new AdapterInputSource(csvPath);
         spec = new CSVInputAdapterSpec(source, "TrafficEvent");
-        spec.setEventsPerSec(1000);
+        spec.setEventsPerSec(1);
         spec.setLooping(true);
         InputAdapter inputAdapter = new CSVInputAdapter(EsperServiceProvider.getInstance(),spec);
         inputAdapter.start();

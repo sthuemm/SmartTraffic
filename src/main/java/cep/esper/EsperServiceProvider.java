@@ -31,7 +31,6 @@ public class EsperServiceProvider {
     private static Map<String, Object> getEventProperties(){
         Map<String, Object> eventProperties = new HashMap<String, Object>();
         eventProperties.put("type", String.class);
-        eventProperties.put("timestamp", Date.class);
 
         return eventProperties;
     }

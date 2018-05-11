@@ -14,7 +14,7 @@ public class SmartTrafficMain {
                 System.out.println("Event: " + eventBeans[0].getUnderlying());
             }
         });
-        EPStatement averagePerMinute = EsperServiceProvider.getInstance().getEPAdministrator().createEPL("select count(*) from TrafficEvent#time(0.1 sec)");
+        EPStatement averagePerMinute = EsperServiceProvider.getInstance().getEPAdministrator().createEPL("select count(*) from TrafficEvent#time(5 sec)");
         averagePerMinute.addListener(new UpdateListener() {
             public void update(EventBean[] eventBeans, EventBean[] eventBeans1) {
                 System.out.println("number Per 10 seconds: " + eventBeans[0].getUnderlying());
